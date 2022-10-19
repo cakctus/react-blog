@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import CloseIcon from "@mui/icons-material/Close"
-import Context from "../context/context"
+import Context from "../../context/context"
 
 type Props = {}
 

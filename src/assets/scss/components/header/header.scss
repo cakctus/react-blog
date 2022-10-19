@@ -2,18 +2,19 @@
 @import url("./_navbar-list.scss");
 @import url("./_navbar-logo.scss");
 @import url("./navbar-search.scss");
+@import url("./_products-submenu.scss");
 
 .header {
   background-color: #ffffff;
   box-shadow: 0 4px 30px #00000012;
-  width: 100%;
+  // width: 100%;
 
   .header-container {
     width: 1200px;
     margin: 0 auto;
 
     .navbar-header {
-      position: fixed;
+      // position: fixed;
       display: grid;
       //   grid-template-areas: "hamburger logo list-logo search";
       grid-template-columns: max-content 1fr repeat(6, 1fr);

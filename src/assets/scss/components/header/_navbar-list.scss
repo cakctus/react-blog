@@ -6,10 +6,13 @@
   .menus {
     display: flex;
     list-style: none;
+    height: 100%;
+    cursor: pointer;
   }
 
   .menu-items {
     position: relative;
+    display: block;
     font-size: 14px;
   }
 

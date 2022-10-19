@@ -1,0 +1,48 @@
+.products-submenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: inherit;
+  gap: 0 10px;
+  z-index: 999;
+  background-color: #ffffff;
+  padding: 0 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  .products-container {
+    width: 19%;
+  }
+
+  .post-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    overflow: hidden;
+
+    .post-img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+
+      &:hover {
+        transform: scale(1.5);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .post-title {
+    font-size: 14px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .post-content {
+    font-size: 14px;
+    width: 100%;
+  }
+}

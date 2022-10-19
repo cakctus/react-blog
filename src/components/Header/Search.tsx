@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import SearchIcon from "@mui/icons-material/Search"
-import Context from "../context/context"
+import Context from "../../context/context"
 
 type Props = {}
 
