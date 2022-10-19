@@ -5,4 +5,37 @@
   align-items: center;
   margin: auto 0;
   padding: auto 0;
+  cursor: pointer;
+}
+
+.search-box {
+  grid-column: 1 / span 8;
+  display: grid;
+
+  .search-input {
+    // width: 100%;
+    grid-column: 1 / span 2;
+    input {
+      width: 90%;
+      height: 50px;
+      color: #131315;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 13px;
+      font-weight: 400;
+      box-sizing: border-box;
+      border: none;
+    }
+  }
+
+  .close-icon {
+    grid-column: 3 / span 1;
+    display: flex;
+    height: 100%;
+    justify-content: start;
+    align-items: center;
+    margin: auto 0;
+    cursor: pointer;
+  }
 }

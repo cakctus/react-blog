@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown"
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward"
 import MenuItems from "./MenuItems"
+import SearchInput from "./SearchInput"
 
 type Props = {}
 
@@ -25,6 +26,7 @@ const Navbar = (props: Props) => {
           submenu: [
             {
               title: "Frontend",
+              url: "frontend",
               submenu: [
                 {
                   title: "Reactjs",
@@ -38,6 +40,7 @@ const Navbar = (props: Props) => {
             },
             {
               title: "Backend",
+              url: "backend",
               submenu: [
                 {
                   title: "NodeJS",
@@ -56,6 +59,16 @@ const Navbar = (props: Props) => {
                 {
                   title: "PHP",
                   url: "php",
+                  submenu: [
+                    {
+                      title: "Laravel",
+                      url: "laravel",
+                    },
+                    {
+                      title: "Symfony ",
+                      url: "symfony ",
+                    },
+                  ],
                 },
               ],
             },
@@ -63,7 +76,29 @@ const Navbar = (props: Props) => {
         },
         {
           title: "SEO",
-          url: "seo",
+          url: "/seo",
+        },
+      ],
+    },
+    {
+      title: "Pricing",
+      url: "/pricing",
+    },
+    {
+      title: "Products",
+      url: "/products",
+    },
+    {
+      title: "Documentation",
+      url: "/docs",
+      submenu: [
+        {
+          title: "Web doc",
+          url: "/docs",
+        },
+        {
+          title: "Video doc",
+          url: "/docs",
         },
       ],
     },
@@ -72,32 +107,6 @@ const Navbar = (props: Props) => {
       url: "/about",
     },
   ]
-  const [coord, setCoord] = useState<number>(0)
-  const [display, setDisplay] = useState<boolean>(true)
-  const liItem = useRef<HTMLUListElement | null>(null)
-
-  const enterHandler = (e: any) => {
-    // console.log(e.target)
-    // console.log(e.target.classList.contains("item__dropdown"))
-    if (
-      e.target.classList.contains("item__dropdown") &&
-      e.target.children[2].className === "navbar-list__subclass"
-    ) {
-      // console.log("block")
-      e.target.children[2].style.display = "block"
-    }
-    if (e.target.classList.contains("item__dropdown") && !display) {
-      e.target.children[2].style.display = "none"
-    }
-  }
-
-  const leaveHandler = (e: any) => {
-    console.log(e.target.children[2])
-    if (!e.target.children[2]) {
-      setDisplay(false)
-      // e.target.children[2].style.display = "none"
-    }
-  }
 
   return (
     <nav className="navbar">
@@ -108,46 +117,6 @@ const Navbar = (props: Props) => {
         })}
       </ul>
     </nav>
-    // <nav className="navbar">
-    //   <ul className="navbar-list">
-    //     <li className="navbar-item">Home</li>
-
-    //     <li
-    //       className="navbar-item item__dropdown"
-    //       onMouseEnter={enterHandler}
-    //       onMouseLeave={leaveHandler}
-    //     >
-    //       <span>Features</span>
-    //       <span className="arrow-drop">
-    //         <ArrowDropDownIcon />
-    //       </span>
-    //       <ul className="navbar-list__subclass" ref={liItem}>
-    //         <li className="navbar-item__subclass">Multi Dropdown</li>
-    //         <li className="navbar-item__subclass">ShortCodes</li>
-    //         <li className="navbar-item__subclass">Site map</li>
-    //         <li className="navbar-item__subclass">Error page</li>
-    //       </ul>
-    //     </li>
-
-    //     <li className="navbar-item">
-    //       <span>Mega Menu</span>
-    //       <span className="arrow-drop">
-    //         <ArrowDropDownIcon />
-    //       </span>
-    //     </li>
-
-    //     <li className="navbar-item item__dropdown" onMouseEnter={enterHandler}>
-    //       <span>Documentation</span>
-    //       <span className="arrow-drop">
-    //         <ArrowDropDownIcon />
-    //       </span>
-    //       <ul className="navbar-list__subclass" ref={liItem}>
-    //         <li className="navbar-item__subclass">Web doc</li>
-    //         <li className="navbar-item__subclass">Video doc</li>
-    //       </ul>
-    //     </li>
-    //   </ul>
-    // </nav>
   )
 }
 

@@ -12,6 +12,7 @@ const MenuItems = ({ items, depthLevel }: Props) => {
 
   useEffect(() => {
     const handler = (event: any) => {
+      console.log(event.target)
       if (dropdown && ref.current && !ref.current.contains(event.target)) {
         setDropdown(false)
       }

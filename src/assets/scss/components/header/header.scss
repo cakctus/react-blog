@@ -13,6 +13,7 @@
     margin: 0 auto;
 
     .navbar-header {
+      position: fixed;
       display: grid;
       //   grid-template-areas: "hamburger logo list-logo search";
       grid-template-columns: max-content 1fr repeat(6, 1fr);
