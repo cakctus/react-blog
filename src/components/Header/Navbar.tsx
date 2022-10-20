@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useRef } from "react"
+import { useContext } from "react"
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown"
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward"
 import MenuItems from "./MenuItems"
 import SearchInput from "./SearchInput"
+import Context from "../../context/context"
 
 type Props = {}
 
 const Navbar = (props: Props) => {
+  const context = useContext(Context)
   const menuItems = [
     {
       title: "Home",

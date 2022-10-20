@@ -43,47 +43,74 @@ const MenuItems = ({ items, depthLevel }: Props) => {
     window.innerWidth > 960 && setDropdown(true)
   }
 
-  const onMouseLeave = () => {
+  const onMouseLeave = (e: any) => {
+    if (e.relatedTarget.className !== "products-submenu") {
+      context?.setProducts(false)
+      console.log("s")
+    }
     window.innerWidth > 960 && setDropdown(false)
-    context?.setProducts(false)
+  }
+
+  const closeDropdown = () => {
+    dropdown && setDropdown(false)
   }
 
   return (
-    <>
-      <li
-        className="menu-items"
-        ref={ref}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-      >
-        {items.submenu ? (
-          <>
-            <button
-              type="button"
-              aria-haspopup="menu"
-              aria-expanded={dropdown ? "true" : "false"}
-              onClick={() => setDropdown((prev) => !prev)}
-            >
-              {items.title}
-              {depthLevel > 0 ? (
-                <span style={{ marginLeft: "3px", fontSize: "1rem" }}>
-                  &raquo;
-                </span>
-              ) : (
-                <span className="arrow" />
-              )}
-            </button>
-            <Dropdown
-              submenus={items.submenu}
-              dropdown={dropdown}
-              depthLevel={depthLevel}
-            />
-          </>
-        ) : (
-          <a href={items.url}>{items.title}</a>
-        )}
-      </li>
-    </>
+    <li
+      className="menu-items"
+      ref={ref}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onClick={closeDropdown}
+    >
+      {items.url && items.submenu ? (
+        <>
+          <button
+            type="button"
+            aria-haspopup="menu"
+            aria-expanded={dropdown ? "true" : "false"}
+            onClick={() => setDropdown((prev) => !prev)}
+          >
+            {window.innerWidth < 960 && depthLevel === 0 ? (
+              items.title
+            ) : (
+              <a href={items.url}>{items.title}</a>
+            )}
+
+            {depthLevel > 0 && window.innerWidth < 960 ? null : depthLevel >
+                0 && window.innerWidth > 960 ? (
+              <span>&raquo;</span>
+            ) : (
+              <span className="arrow" />
+            )}
+          </button>
+          <Dropdown
+            depthLevel={depthLevel}
+            submenus={items.submenu}
+            dropdown={dropdown}
+          />
+        </>
+      ) : !items.url && items.submenu ? (
+        <>
+          <button
+            type="button"
+            aria-haspopup="menu"
+            aria-expanded={dropdown ? "true" : "false"}
+            onClick={() => setDropdown((prev) => !prev)}
+          >
+            {items.title}{" "}
+            {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />}
+          </button>
+          <Dropdown
+            depthLevel={depthLevel}
+            submenus={items.submenu}
+            dropdown={dropdown}
+          />
+        </>
+      ) : (
+        <a href={items.url}>{items.title}</a>
+      )}
+    </li>
   )
 }
 

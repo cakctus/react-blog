@@ -38,7 +38,7 @@ const Header = (props: Props) => {
                   <Navbar />
                   <Search />
                 </div>
-                <ProductsSubmenu />
+                {products && <ProductsSubmenu />}
               </>
             )}
           </div>

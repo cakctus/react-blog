@@ -10,10 +10,11 @@ const ProductsSubmenu = (props: Props) => {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
+    const bottom = parseInt(context?.productsCoords.bottom)
     const element = ref?.current
-    element!.style.position = "absolute"
+    // element!.style.position = "absolute"
     // element!.style.left = `0px`
-    // element!.style.marginTop = `${parseInt(context?.productsCoords.top)}px`
+    element!.style.top = `${bottom}px`
   }, [context?.products])
 
   async function getPosts() {
@@ -24,7 +25,6 @@ const ProductsSubmenu = (props: Props) => {
       const data = await response.data
       const articles = await data.articles
       setPosts(articles)
-      console.log(articles)
     } catch (error) {
       console.error(error)
     }
@@ -34,15 +34,17 @@ const ProductsSubmenu = (props: Props) => {
     if (context?.products) getPosts()
   }, [context?.products])
 
-  console.log(posts)
+  const onMouseLeave = (e: any) => {
+    context?.setProducts(false)
+  }
 
   return (
-    <div className="products-submenu" ref={ref}>
-      {posts.map((post) => {
+    <div className="products-submenu" ref={ref} onMouseLeave={onMouseLeave}>
+      {posts.map((post, index) => {
         const { urlToImage, title, description } = post
 
         return (
-          <div className="products-container">
+          <div className="products-container" key={index}>
             <div className="post-image">
               <img className="post-img" src={urlToImage} alt="" />
             </div>
