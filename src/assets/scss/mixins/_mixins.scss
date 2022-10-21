@@ -1,7 +1,94 @@
-@mixin reset-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+@mixin content-item(
+  $content-item,
+  $title-weight,
+  $title-size,
+  $img-width,
+  $img-height: 100%
+) {
+  .content-item {
+    width: $content-item;
+    margin-bottom: 1rem;
+
+    .content-image {
+      width: 100%;
+
+      .content-img {
+        width: 100%;
+        height: $img-height;
+      }
+    }
+
+    .content-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+
+      .content-tag {
+        width: max-content;
+        font-style: italic;
+        font-weight: 600;
+        color: #000;
+        margin-top: 5px;
+      }
+
+      .content-title {
+        font-size: $title-size;
+        font-weight: $title-weight;
+        color: #131315;
+      }
+
+      .content-by {
+        display: flex;
+        justify-content: row;
+        justify-content: center;
+        align-items: center;
+
+        .content-by-by {
+          color: #afafaf;
+          margin-right: 5px;
+          font-size: 13px;
+        }
+
+        .content-by-title {
+          display: flex;
+          justify-content: center;
+          color: #aaa;
+          font-size: 12px;
+          margin-top: auto;
+          margin-right: 10px;
+
+          .content-by-user {
+            width: 13px;
+            margin-right: 2px;
+          }
+        }
+
+        .content-by-date {
+          display: flex;
+          justify-content: center;
+          color: #aaa;
+          font-size: 12px;
+          margin-top: auto;
+
+          .content-by-calendar {
+            width: 12px;
+            margin-right: 2px;
+          }
+        }
+      }
+
+      .content-content {
+        display: block;
+        overflow: hidden;
+        font-size: 13px;
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 10px 0 7px;
+        inline-size: 100%;
+      }
+    }
+  }
 }
 
 @mixin horizontal-list {

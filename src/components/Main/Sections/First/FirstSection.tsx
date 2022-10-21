@@ -4,6 +4,7 @@ import two from "../../../../assets/img/img/2.jpg"
 import three from "../../../../assets/img/img/3.jpg"
 import calendar from "../../../../assets/img/calendar.svg"
 import user from "../../../../assets/img/user.svg"
+import audio from "../../../../assets/audi/dog.mp3"
 
 type Props = {}
 
@@ -12,27 +13,27 @@ const FirstSection = (props: Props) => {
     <div className="first-section-container">
       <section className="first-section">
         <div className="first-left">
-          <div className="left-item">
-            <div className="left-image">
-              <img className="left-img" src={one} alt="" />
+          <div className="content-item">
+            <div className="content-image">
+              <img className="content-img" src={one} alt="" />
             </div>
-            <div className="first-left-body">
-              <div className="left-tag">Game</div>
-              <h2 className="left-title">
+            <div className="content-body">
+              <div className="content-tag">Game</div>
+              <h2 className="content-title">
                 In Game Age advantages end sufficient eat expression
               </h2>
-              <div className="left-by">
-                <span className="lef-by-by">By</span>
-                <span className="left-by-title">
-                  <img className="left-by-user" src={user} alt="" /> Sora
+              <div className="content-by">
+                <span className="content-by-by">By</span>
+                <span className="content-by-title">
+                  <img className="content-by-user" src={user} alt="" /> Sora
                   Bloggin Tips
                 </span>
-                <span className="left-by-date">
-                  <img className="left-by-calendar" src={calendar} alt="" />
+                <span className="content-by-date">
+                  <img className="content-by-calendar" src={calendar} alt="" />
                   June 11, 2022
                 </span>
               </div>
-              <div className="left-content">
+              <div className="content-content">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio,
                 veritatis cumque. Quasi consectetur facere doloremque quis
                 possimus accusantium esse corrupti, expedita animi, est rerum
@@ -46,34 +47,48 @@ const FirstSection = (props: Props) => {
         </div>
 
         <div className="first-right">
-          <div className="right-item">
-            <div className="right-item">
-              <div className="right-image">
-                <img className="right-img" src={three} alt="" />
+          <div className="content-item">
+            <div className="content-image">
+              <img className="content-img" src={two} alt="" />
+            </div>
+            <div className="content-body">
+              <div className="content-tag">Game</div>
+              <h2 className="content-title">
+                In Game Age advantages end sufficient eat expression
+              </h2>
+              <div className="content-by">
+                <span className="content-by-by">By</span>
+                <span className="content-by-title">
+                  <img className="content-by-user" src={user} alt="" /> Sora
+                  Bloggin Tips
+                </span>
+                <span className="content-by-date">
+                  <img className="content-by-calendar" src={calendar} alt="" />
+                  June 11, 2022
+                </span>
               </div>
-            </div>
-            <div className="right-tag">In Game</div>
-            <div className="right-title">
-              In Game Age advantages end sufficient eat expression
-            </div>
-            <div className="right-by">
-              <span className="right-by-title">Sora Bloggin Tips</span>
-              <span className="right-by-date">June 11, 2022</span>
             </div>
           </div>
-          <div className="right-item">
-            <div className="right-item">
-              <div className="right-image">
-                <img className="right-img" src={two} alt="" />
+          <div className="content-item">
+            <div className="content-image">
+              <img className="content-img" src={three} alt="" />
+            </div>
+            <div className="content-body">
+              <div className="content-tag">Game</div>
+              <h2 className="content-title">
+                In Game Age advantages end sufficient eat expression
+              </h2>
+              <div className="content-by">
+                <span className="content-by-by">By</span>
+                <span className="content-by-title">
+                  <img className="content-by-user" src={user} alt="" /> Sora
+                  Bloggin Tips
+                </span>
+                <span className="content-by-date">
+                  <img className="content-by-calendar" src={calendar} alt="" />
+                  June 11, 2022
+                </span>
               </div>
-            </div>
-            <div className="right-tag">In Game</div>
-            <div className="right-title">
-              In Game Age advantages end sufficient eat expression
-            </div>
-            <div className="right-by">
-              <span className="right-by-title">Sora Bloggin Tips</span>
-              <span className="right-by-date">June 11, 2022</span>
             </div>
           </div>
         </div>

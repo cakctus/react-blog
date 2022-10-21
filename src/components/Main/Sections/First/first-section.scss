@@ -1,116 +1,30 @@
+@use "../../../../assets/scss/mixins/_mixins.scss" as *;
+
 .first-section-container {
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
   font-size: 14px;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .first-section {
   display: grid;
-  grid-template-areas: "left left right";
+  grid-template-areas: "left left left left left right";
   gap: 1rem;
 
   .first-left {
     grid-area: left;
     width: 100%;
+    align-self: stretch;
 
-    .first-left-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: flex-start;
-
-      .left-tag {
-        width: max-content;
-        font-style: italic;
-        font-weight: 600;
-        color: #000;
-        margin-top: 5px;
-      }
-
-      .left-title {
-        font-weight: 800;
-        color: #131315;
-      }
-
-      .left-by {
-        display: flex;
-        justify-content: row;
-        justify-content: center;
-        align-items: center;
-
-        .lef-by-by {
-          color: #afafaf;
-          margin-right: 5px;
-          font-size: 13px;
-        }
-
-        .left-by-title {
-          display: flex;
-          justify-content: center;
-          color: #aaa;
-          font-size: 12px;
-          margin-top: auto;
-          margin-right: 10px;
-
-          .left-by-user {
-            width: 13px;
-            margin-right: 2px;
-          }
-        }
-
-        .left-by-date {
-          display: flex;
-          justify-content: center;
-          color: #aaa;
-          font-size: 12px;
-          margin-top: auto;
-
-          .left-by-calendar {
-            width: 12px;
-            margin-right: 2px;
-          }
-        }
-      }
-
-      .left-content {
-        display: block;
-        overflow: hidden;
-        font-size: 13px;
-        line-height: 1.5em;
-        font-weight: 400;
-        margin: 10px 0 7px;
-        inline-size: 100%;
-      }
-    }
-
-    .left-item {
-      width: 100%;
-
-      .left-image {
-        width: 100%;
-
-        .left-img {
-          width: 100%;
-        }
-      }
-    }
+    @include content-item(100%, 800, 1.5rem, 100%);
   }
 
   .first-right {
     grid-area: right;
     width: 100%;
+    align-self: stretch;
 
-    .right-item {
-      width: 100%;
-
-      .right-image {
-        width: 200px;
-
-        .right-img {
-          width: 100%;
-        }
-      }
-    }
+    @include content-item(250px, 700, 1rem, 250px, 150px);
   }
 }
