@@ -4,7 +4,9 @@ import two from "../../../../assets/img/img/2.jpg"
 import three from "../../../../assets/img/img/3.jpg"
 import calendar from "../../../../assets/img/calendar.svg"
 import user from "../../../../assets/img/user.svg"
-import audio from "../../../../assets/audi/dog.mp3"
+import articles from "../../../../data/articles"
+import LeftArticle from "./LeftArticle"
+import RightArticle from "./RightArticle"
 
 type Props = {}
 
@@ -13,7 +15,10 @@ const FirstSection = (props: Props) => {
     <div className="first-section-container">
       <section className="first-section">
         <div className="first-left">
-          <div className="content-item">
+          {articles.slice(0, 1).map((item) => {
+            return <LeftArticle item={item} />
+          })}
+          {/* <div className="content-item">
             <div className="content-image">
               <img className="content-img" src={one} alt="" />
             </div>
@@ -43,11 +48,15 @@ const FirstSection = (props: Props) => {
                 nesciunt dicta aperiam.
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="first-right">
-          <div className="content-item">
+          {articles.slice(1, 3).map((item) => {
+            return <RightArticle item={item} />
+          })}
+
+          {/* <div className="content-item">
             <div className="content-image">
               <img className="content-img" src={two} alt="" />
             </div>
@@ -90,7 +99,7 @@ const FirstSection = (props: Props) => {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
