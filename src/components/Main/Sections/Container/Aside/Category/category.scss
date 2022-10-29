@@ -1,0 +1,21 @@
+.span-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  grid-area: 1rem;
+}
+
+.span-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #131315;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: capitalize;
+  border-bottom: 1px dotted #9c9c9c;
+  margin-bottom: 0.5rem;
+  padding-bottom: 5px;
+}

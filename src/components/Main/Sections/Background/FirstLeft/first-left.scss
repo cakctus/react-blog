@@ -1,0 +1,110 @@
+.first-left {
+  grid-area: first;
+  margin-right: 1rem;
+}
+
+.content-item1 {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(33.3333333333%);
+  // flex-basis: 32%;
+  gap: 10px;
+  margin-bottom: 1rem;
+
+  &:nth-child(3n + 3) {
+    margin-left: 0;
+  }
+
+  .content-image {
+    margin-right: 0.5rem;
+    width: 30%;
+
+    .content-img {
+      width: 100%;
+      object-fit: cover;
+      height: 170px;
+    }
+  }
+
+  .content-body {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    .content-tag {
+      width: max-content;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 13px;
+      color: rgb(239, 239, 239);
+      margin-top: 5px;
+    }
+
+    .content-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: rgb(239, 239, 239);
+    }
+
+    .content-by {
+      display: flex;
+      justify-content: column;
+      justify-content: center;
+      align-items: center;
+
+      .content-by-by {
+        color: #afafaf;
+        margin-right: 5px;
+        font-size: 13px;
+      }
+
+      .content-by-title {
+        display: flex;
+        justify-content: center;
+        color: #aaa;
+        font-size: 12px;
+        margin-top: auto;
+        margin-right: 10px;
+
+        .content-by-user {
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(107deg)
+            brightness(106%) contrast(101%);
+          width: 13px;
+          margin-right: 2px;
+        }
+      }
+
+      .content-by-date {
+        display: flex;
+        justify-content: center;
+        color: #aaa;
+        font-size: 12px;
+        margin-top: auto;
+
+        .content-by-calendar {
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(107deg)
+            brightness(106%) contrast(101%);
+          width: 12px;
+          margin-right: 2px;
+        }
+      }
+    }
+
+    .content-content {
+      display: block;
+      overflow: hidden;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.5em;
+      font-weight: 400;
+      margin: 10px 0 7px;
+      inline-size: 100%;
+      text-align: justify;
+    }
+  }
+}

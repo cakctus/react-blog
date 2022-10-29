@@ -1,0 +1,8 @@
+@use "../../../../../assets/scss/mixins/mixins" as *;
+
+.editors {
+  grid-area: editors;
+  width: 100%;
+
+  @include content-item-grid(100%, 800, 1rem, 170px);
+}

@@ -1,0 +1,107 @@
+@use "../../../../../../assets/scss/mixins/mixins" as *;
+
+.popular {
+  grid-area: editors;
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  @include content-item-grid(100%, 800, 1rem, center, 0.5rem);
+
+  .content-item {
+    display: flex;
+
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+    &:nth-child(3n + 3) {
+      margin-left: 0;
+    }
+
+    .content-image {
+      margin-right: 1rem;
+      width: 30%;
+
+      .content-img {
+        width: 70px;
+        object-fit: cover;
+        height: 50px;
+        border-radius: 5px;
+      }
+    }
+
+    .content-body {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+
+      .content-tag {
+        width: max-content;
+        font-style: italic;
+        font-weight: 600;
+        color: #000;
+        margin-top: 5px;
+      }
+
+      .content-title {
+        font-size: 14px;
+        font-weight: 800;
+        color: #131315;
+        margin-bottom: 5px;
+        margin-top: 0;
+      }
+
+      .content-by {
+        display: flex;
+        justify-content: column;
+        justify-content: center;
+        align-items: center;
+
+        .content-by-by {
+          color: #afafaf;
+          margin-right: 5px;
+          font-size: 13px;
+        }
+
+        .content-by-title {
+          display: flex;
+          justify-content: center;
+          color: #aaa;
+          font-size: 12px;
+          margin-top: auto;
+          margin-right: 10px;
+
+          .content-by-user {
+            width: 13px;
+            margin-right: 2px;
+          }
+        }
+
+        .content-by-date {
+          display: flex;
+          justify-content: center;
+          color: #aaa;
+          font-size: 12px;
+          margin-top: auto;
+
+          .content-by-calendar {
+            width: 12px;
+            margin-right: 2px;
+          }
+        }
+      }
+
+      .content-content {
+        display: block;
+        overflow: hidden;
+        font-size: 13px;
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 10px 0 7px;
+        inline-size: 100%;
+        text-align: justify;
+      }
+    }
+  }
+}

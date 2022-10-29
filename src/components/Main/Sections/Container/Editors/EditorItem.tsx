@@ -1,15 +1,12 @@
-import calendar from "../../../../assets/img/calendar.svg"
-import user from "../../../../assets/img/user.svg"
-
-import three from "../../../../assets/img/img/2.jpg"
+import calendar from "../../../../../assets/img/calendar.svg"
+import user from "../../../../../assets/img/user.svg"
 
 type Props = {
-  item: any
+  article: any
 }
 
-const RightArticle = ({ item }: Props) => {
-  const { tags, image, title, by, date, content } = item
-
+const EditorItem = ({ article }: Props) => {
+  const { tags, image, title, by, date, content } = article
   return (
     <div className="content-item">
       <div className="content-image">
@@ -28,9 +25,10 @@ const RightArticle = ({ item }: Props) => {
             {date}
           </span>
         </div>
+        <div className="content-content">{content.slice(0, 200)}...</div>
       </div>
     </div>
   )
 }
 
-export default RightArticle
+export default EditorItem

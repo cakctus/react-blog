@@ -1,0 +1,23 @@
+@use "../../../../../assets/scss/mixins/mixins" as *;
+
+.recent {
+  grid-area: recent;
+  width: 100%;
+  display: flex;
+  gap: 0 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include content-item-lazyload(calc(50% - 1rem), 800, 1rem, 170px);
+
+  .button-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 0;
+    margin: 0.5rem 0;
+  }
+}

@@ -1,0 +1,22 @@
+.tags-item {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.tag-item {
+  height: 26px;
+  background-color: #fdfdff;
+  color: #131315;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  padding: 0 10px;
+  border: 1px solid #f2f2f6;
+  border-radius: 3px;
+}

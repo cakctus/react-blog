@@ -1,0 +1,28 @@
+// @use "../../../../assets/scss/mixins/_mixins.scss" as *;
+
+.section-title-container {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+}
+
+.section-title-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+
+  .section-title-right {
+    font-size: 14px;
+    font-weight: 800;
+    margin: 0.5rem 1rem;
+  }
+
+  .section-title-left {
+    font-size: 14px;
+    font-weight: 800;
+    margin: 0.5rem 1rem;
+  }
+}

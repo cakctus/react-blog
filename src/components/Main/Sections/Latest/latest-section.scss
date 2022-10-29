@@ -1,0 +1,71 @@
+@use "../../../../assets/scss/mixins/_mixins.scss" as *;
+
+.latest-section {
+  display: grid;
+  grid-template-areas: "latest";
+  width: 100%;
+  position: relative;
+
+  .latest {
+    grid-area: latest;
+    margin: 0;
+    padding: 0;
+    // align-self: stretch;
+
+    .latest-section-container {
+      width: 1000px;
+      margin: 0 auto;
+      position: relative;
+
+      font-size: 14px;
+      margin-top: 1.5rem;
+      overflow: hidden;
+
+      .latest-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+
+        transition: all 0.5s linear;
+      }
+
+      @include content-item-list(100%, 800, 1rem, 170px);
+
+      .latest-section-move {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        z-index: 999;
+
+        .arrow-right,
+        .arrow-left {
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #000;
+          border-left: 2px solid #000;
+        }
+        .arrow-right {
+          transform: rotate(135deg);
+        }
+
+        .arrow-left {
+          transform: rotate(-45deg);
+        }
+      }
+
+      .latest-section-left {
+        cursor: pointer;
+        margin-left: 5px;
+      }
+
+      .latest-section-right {
+        cursor: pointer;
+        margin-right: 5px;
+      }
+    }
+  }
+}

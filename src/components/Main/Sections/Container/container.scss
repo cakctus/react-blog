@@ -1,0 +1,13 @@
+.section-container {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "editors editors editors editors editors aside"
+    "recent recent recent  recent recent  aside";
+  gap: 15px;
+}

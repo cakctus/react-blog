@@ -1,15 +1,12 @@
 import calendar from "../../../../assets/img/calendar.svg"
 import user from "../../../../assets/img/user.svg"
 
-import three from "../../../../assets/img/img/2.jpg"
-
 type Props = {
   item: any
 }
 
-const RightArticle = ({ item }: Props) => {
+const LatestItems = ({ item }: Props) => {
   const { tags, image, title, by, date, content } = item
-
   return (
     <div className="content-item">
       <div className="content-image">
@@ -33,4 +30,4 @@ const RightArticle = ({ item }: Props) => {
   )
 }
 
-export default RightArticle
+export default LatestItems

@@ -1,0 +1,20 @@
+.background-section {
+  background: #131315;
+  padding-top: 1rem;
+  margin-bottom: 30px;
+  margin-top: 1.5rem;
+}
+
+.background-container {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.background-grid {
+  display: grid;
+  grid-template-areas:
+    "first first first first second"
+    "bottom bottom bottom  bottom  bottom";
+  gap: 15px;
+}
