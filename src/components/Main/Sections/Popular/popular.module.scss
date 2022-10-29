@@ -21,7 +21,8 @@ $scrollBarHeight: 1px;
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 13px;
+  height: 0;
 }
 
 *::-webkit-scrollbar-track {
@@ -30,16 +31,26 @@ $scrollBarHeight: 1px;
 
 *::-webkit-scrollbar-thumb {
   background-color: #212121;
-  border-radius: 9px;
+  border-radius: 15px;
   border: 3px solid #ffffff;
+}
+
+body {
+  height: 10000px;
+}
+
+.section_container {
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .popular {
   width: 1000px;
   overflow: hidden;
   margin: 0 auto;
-  //   overflow-y: auto;
-  overflow-x: scroll;
+  overflow: hidden;
+  overflow-x: auto;
+  overflow: auto;
 }
 
 .popular_items {
