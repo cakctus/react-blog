@@ -1,0 +1,11 @@
+.last_container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.last {
+  display: grid;
+  grid-template-areas: "random random featured featured popular popular";
+  gap: 1rem;
+  margin-top: 1.5rem;
+}

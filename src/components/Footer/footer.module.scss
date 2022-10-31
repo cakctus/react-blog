@@ -1,0 +1,29 @@
+.footerContainer {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.footerItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px #d1cdcd dashed;
+
+  .footerUl {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      font-size: 11px;
+      font-weight: 500;
+      display: block;
+      color: #131315;
+      text-transform: uppercase;
+      line-height: 34px;
+      padding: 0 10px;
+      margin: 0 0 0 5px;
+    }
+  }
+}

@@ -1,11 +1,13 @@
 import Header from "../../components/Header/Header"
 import Main from "../Main/Main"
+import Footer from "../../components/Footer/Footer"
 
 function App() {
   return (
     <>
       <Header />
       <Main />
+      <Footer />
     </>
   )
 }

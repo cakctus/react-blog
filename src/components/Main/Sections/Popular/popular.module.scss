@@ -2,16 +2,6 @@ $finalHeight: 250px;
 $finalWidth: 3 * $finalHeight;
 $scrollBarHeight: 1px;
 
-// ::-webkit-scrollbar {
-//   width: $scrollBarHeight;
-//   height: $scrollBarHeight;
-// }
-
-// ::-webkit-scrollbar-button {
-//   width: $scrollBarHeight;
-//   height: $scrollBarHeight;
-// }
-
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -35,22 +25,24 @@ $scrollBarHeight: 1px;
   border: 3px solid #ffffff;
 }
 
-body {
-  height: 10000px;
+.mainPopular {
+  background-color: #ffffff;
 }
 
 .section_container {
   width: 1000px;
   margin: 0 auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .popular {
   width: 1000px;
   overflow: hidden;
-  margin: 0 auto;
+  // margin: 0 auto;
   overflow: hidden;
-  overflow-x: auto;
-  overflow: auto;
+  // overflow-x: auto;
+  // overflow: auto;
 }
 
 .popular_items {
@@ -86,7 +78,7 @@ body {
   .contentBody {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: flex-start;
 
     .contentTag {
