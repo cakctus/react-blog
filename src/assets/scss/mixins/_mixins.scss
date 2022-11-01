@@ -308,6 +308,7 @@
   $img-height: 100%
 ) {
   .content-item {
+    margin-bottom: 1rem;
     background-color: #f7f8fa;
 
     width: calc(50% - 1rem);
@@ -328,6 +329,7 @@
     }
 
     .content-body {
+      padding: 0.5rem;
       width: 100%;
       display: flex;
       flex-direction: column;

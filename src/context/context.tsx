@@ -1,4 +1,4 @@
-import React, { createContext } from "react"
+import { createContext } from "react"
 
 export interface AppContextInterface {
   setShow: any
@@ -6,6 +6,7 @@ export interface AppContextInterface {
   setProductsCoords: any
   productsCoords: any
   products: any
+  headerHeight: any
 }
 
 const Context = createContext<AppContextInterface | null>(null)

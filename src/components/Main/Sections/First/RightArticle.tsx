@@ -1,14 +1,12 @@
 import calendar from "../../../../assets/img/calendar.svg"
 import user from "../../../../assets/img/user.svg"
 
-import three from "../../../../assets/img/img/2.jpg"
-
 type Props = {
   item: any
 }
 
 const RightArticle = ({ item }: Props) => {
-  const { tags, image, title, by, date, content } = item
+  const { tags, image, title, by, date } = item
 
   return (
     <div className="content-item">

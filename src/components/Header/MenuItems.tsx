@@ -46,7 +46,6 @@ const MenuItems = ({ items, depthLevel }: Props) => {
   const onMouseLeave = (e: any) => {
     if (e.relatedTarget.className !== "products-submenu") {
       context?.setProducts(false)
-      console.log("s")
     }
     window.innerWidth > 960 && setDropdown(false)
   }

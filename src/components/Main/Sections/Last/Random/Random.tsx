@@ -16,7 +16,7 @@ const Random = (props: Props) => {
 
   let result = articles.slice(from(0, 4), to(5, 15))
   result.length = 4
-  console.log(result)
+
   return (
     <div className={styles.random}>
       <h3 className={styles.sectionTitle}>Random Post</h3>

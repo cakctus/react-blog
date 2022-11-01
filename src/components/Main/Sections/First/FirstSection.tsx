@@ -1,3 +1,4 @@
+import { useState } from "react"
 import "./first-section.scss"
 import articles from "../../../../data/articles"
 import LeftArticle from "./LeftArticle"

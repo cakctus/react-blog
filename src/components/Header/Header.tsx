@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Hamburger from "./Hamburger"
 import Logo from "./Logo"
 import Navbar from "./Navbar"
@@ -14,6 +14,9 @@ const Header = (props: Props) => {
   const [show, setShow] = useState<boolean>(false)
   const [products, setProducts] = useState(false)
   const [productsCoords, setProductsCoords] = useState({})
+  const [headerHeight, setHeaderHeight] = useState(
+    document.querySelector(".navbar-header")?.clientHeight
+  )
 
   const sampleAppContext: AppContextInterface = {
     setShow,
@@ -21,7 +24,12 @@ const Header = (props: Props) => {
     setProductsCoords,
     productsCoords,
     products,
+    headerHeight,
   }
+
+  useEffect(() => {
+    setHeaderHeight(document.querySelector(".navbar-header")?.clientHeight)
+  }, [])
 
   return (
     <>

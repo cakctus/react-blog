@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import "./latest-section.scss"
 import LatestItems from "./LatestItems"
 import SectionTitle from "../../SectionTitle/SectionTitle"
@@ -11,18 +11,6 @@ const LatestSection = (props: Props) => {
   const [length, setLength] = useState(6)
   const [show, setShow] = useState(false)
 
-  const styles = {
-    transform: `translateX(${move}px)`,
-  }
-
-  //   document
-  //     .querySelector(".latest-section-left")
-  //     ?.addEventListener("click", clickLeftHandler)
-
-  //   document
-  //     .querySelector(".latest-section-right")
-  //     ?.addEventListener("click", clickRightHandler)
-
   function clickRightHandler() {
     setMove((prev) => {
       if (length === 3) {
@@ -31,13 +19,11 @@ const LatestSection = (props: Props) => {
       return move + 100
     })
     setLength((prev) => {
-      if (prev === articles.length) {
+      if (prev === articles.length - 3) {
         return 3
       }
       return prev + 3
     })
-    console.log(length, "length")
-    console.log(articles.length, "article length")
   }
 
   function clickLeftHandler() {
