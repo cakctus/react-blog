@@ -41,7 +41,7 @@ const articles = [
     title: "Do listening am eagerness oh objection collected",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/3.jpg",
+    image: "/react-blog/images/3.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -59,7 +59,7 @@ const articles = [
     title: "To travelling occasional at oh sympathize prosperous",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/4.jpg",
+    image: "/react-blog/images/4.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -77,7 +77,7 @@ const articles = [
     title: "My entrance me is disposal bachelor remember relation",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/5.jpg",
+    image: "/react-blog/images/5.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -95,7 +95,7 @@ const articles = [
     title: "Assure polite his really and others figure though",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/7.jpg",
+    image: "/react-blog/images/7.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -113,7 +113,7 @@ const articles = [
     title: "Any delicate you how kindness horrible outlived servants",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/8.jpg",
+    image: "/react-blog/images/8.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -131,7 +131,7 @@ const articles = [
     title: "Old unsatiable our now considered travelling impression",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/9.jpg",
+    image: "/react-blog/images/9.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -149,7 +149,7 @@ const articles = [
     title: "Do listening am eagerness oh objection collected",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/10.jpg",
+    image: "/react-blog/images/10.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -167,7 +167,7 @@ const articles = [
     title: "Do listening am eagerness oh objection collected",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/11.jpg",
+    image: "/react-blog/images/11.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -185,7 +185,7 @@ const articles = [
     title: "Do listening am eagerness oh objection collected",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/12.jpg",
+    image: "/react-blog/images/12.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -203,7 +203,7 @@ const articles = [
     title: "Do listening am eagerness oh objection collected",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/13.jpg",
+    image: "/react-blog/images/13.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -221,7 +221,7 @@ const articles = [
     title: "To travelling occasional at oh sympathize prosperous",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/14.jpg",
+    image: "/react-blog/images/14.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -239,7 +239,7 @@ const articles = [
     title: "My entrance me is disposal bachelor remember relation",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/15.jpg",
+    image: "/react-blog/images/15.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -257,7 +257,7 @@ const articles = [
     title: "Assure polite his really and others figure though",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/9.jpg",
+    image: "/react-blog/images/9.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -275,7 +275,7 @@ const articles = [
     title: "Assure polite his really and others figure though",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/3.jpg",
+    image: "/react-blog/images/3.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -293,7 +293,7 @@ const articles = [
     title: "Assure polite his really and others figure though",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/5.jpg",
+    image: "/react-blog/images/5.jpg",
     get tags() {
       let s = this.tag
       let tags = []
@@ -311,7 +311,7 @@ const articles = [
     title: "Assure polite his really and others figure though",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/2.jpg",
+    image: "/react-blog/images/2.jpg",
     get tags() {
       let s = this.tag
       let tags = []
