@@ -23,7 +23,7 @@ const articles = [
     title: "Age advantages end sufficient eat expression",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/2.jpg",
+    image: "/react-blog/images/2.jpg",
     get tags() {
       let s = this.tag
       let tags = []
