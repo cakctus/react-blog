@@ -5,7 +5,7 @@ const articles = [
     title: "Insipidity sufficient dispatched any reasonably led ask",
     by: "Sora Blogging Tips",
     date: "June 11, 2022",
-    image: "/images/1.jpg",
+    image: "/react-blog/images/1.jpg",
     get tags() {
       let s = this.tag
       let tags = []
