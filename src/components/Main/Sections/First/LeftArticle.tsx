@@ -46,39 +46,31 @@ const LeftArticle = ({ item, indicator }: Props) => {
           position = "activeSlide"
         }
         return (
-          <>
-            <article
-              key={articleId}
-              className={`content-item ${position}`}
-              onMouseEnter={() => setPaused(true)}
-              onMouseLeave={() => setPaused(false)}
-            >
-              <div className="content-image">
-                <img className="content-img" src={image} alt="" />
+          <article
+            key={articleId}
+            className={`content-item ${position}`}
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+          >
+            <div className="content-image">
+              <img className="content-img" src={image} alt="" />
+            </div>
+            <div className="content-body">
+              <div className="content-tag">{tags}</div>
+              <h2 className="content-title">{title}</h2>
+              <div className="content-by">
+                <span className="content-by-by">By</span>
+                <span className="content-by-title">
+                  <img className="content-by-user" src={user} alt="" /> {by}
+                </span>
+                <span className="content-by-date">
+                  <img className="content-by-calendar" src={calendar} alt="" />
+                  {date}
+                </span>
               </div>
-              <div className="content-body">
-                <div className="content-tag">{tags}</div>
-                <h2 className="content-title">{title}</h2>
-                <div className="content-by">
-                  <span className="content-by-by">By</span>
-                  <span className="content-by-title">
-                    <img className="content-by-user" src={user} alt="" /> {by}
-                  </span>
-                  <span className="content-by-date">
-                    <img
-                      className="content-by-calendar"
-                      src={calendar}
-                      alt=""
-                    />
-                    {date}
-                  </span>
-                </div>
-                <div className="content-content">
-                  {content.slice(0, 350)}...
-                </div>
-              </div>
-            </article>
-          </>
+              <div className="content-content">{content.slice(0, 350)}...</div>
+            </div>
+          </article>
         )
       })}
 
